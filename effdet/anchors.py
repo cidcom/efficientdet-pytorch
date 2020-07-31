@@ -161,8 +161,8 @@ def _generate_anchor_boxes(image_size, anchor_scale, anchor_configs):
 
 def clip_boxes_xyxy(boxes: torch.Tensor, size: torch.Tensor):
     boxes = boxes.clamp(min=0)
-    size = torch.cat([size, size], dim=0)
-    boxes = boxes.min(size)
+    #size = torch.cat([size, size], dim=0)
+    #boxes = boxes.min(size)
     return boxes
 
 
